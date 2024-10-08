@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import logo from "./logo.png";
-import { HiOutlineHome, HiOutlineClipboardDocument, HiOutlineChatBubbleOvalLeft, HiOutlineUsers } from "react-icons/hi2";
+import { HiOutlineHome } from "react-icons/hi2";
 import Image from 'next/image';
 
 const geistSans = localFont({
