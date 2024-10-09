@@ -33,6 +33,10 @@ export default function Home() {
     fetchAnalytics();
   }, []);
 
+  if (!analytics) {
+    return <div className="py-5">Загрузка статистики...</div>;
+  }
+
   return (
     <div className="grid grid-cols-10">
       <div className="col-span-8 py-5 pr-4">
