@@ -1,7 +1,9 @@
-"use client"; // Add this line to declare the component as a Client Component
+"use client";
 
 import { useEffect, useState } from "react";
 import axios from "axios"
+import { FaArrowTrendUp, FaArrowTrendDown } from "react-icons/fa6";
+
 
 export default function Home() {
   const [analytics, setAnalytics] = useState<{
@@ -33,35 +35,89 @@ export default function Home() {
   }
 
   return (
-    <div className="py-5">
-      <div className="bg-white border border-gray-100 rounded-lg px-5 py-4">
-        <h1 className="text-2xl font-bold mb-5">Статистика платформы</h1>
-        <ul className="list-disc space-y-3 ml-5">
-          <li>
-            <strong>Количество пользователей:</strong> {analytics.user_count}
-          </li>
-          <li>
-            <strong>Количество выпускников:</strong> {analytics.graduate_count}
-          </li>
-          <li>
-            <strong>Количество невыпускников:</strong> {analytics.none_graduate_count}
-          </li>
-          <li>
-            <strong>Количество компаний:</strong> {analytics.companies_count}
-          </li>
-          <li>
-            <strong>Количество объявлений:</strong> {analytics.announcements_count}
-          </li>
-          <li>
-            <strong>Количество откликов:</strong> {analytics.responses_count}
-          </li>
-          <li>
-            <strong>Количество откликнувшихся сотрудников:</strong> {analytics.employees_responded_count}
-          </li>
-          <li>
-            <strong>Количество компаний, которые откликнулись:</strong> {analytics.companies_responded_count}
-          </li>
-        </ul>
+    <div className="grid grid-cols-10">
+      <div className="col-span-8 py-5 pr-4">
+        <div className='flex gap-x-2 items-center'>
+            <input
+                type='text'
+                className='px-5 py-2 rounded-lg border border-gray-100 bg-white w-[250px]'
+                placeholder='Поиск аналитики'
+            />
+            <input
+                type='date'
+                className='px-5 py-2 rounded-lg border border-gray-100 bg-white'
+            />
+            <div>
+                -
+            </div>
+            <input
+                type='date'
+                className='px-5 py-2 rounded-lg border border-gray-100 bg-white'
+            />
+            <div
+                className='px-5 cursor-pointer py-2 text-white bg-blue-500 rounded-lg'
+            >
+                Обновить
+            </div>
+        </div>
+        <div className='grid grid-cols-3 gap-2 mt-3'>
+            <div className='bg-white w-full rounded-lg border border-gray-100'>
+                <div className='text-gray-500 text-sm mt-3 px-5'>Количество пользователей</div> 
+                <div className='flex mt-6 px-5'>
+                    <div>
+                        <div className='text-4xl'>{analytics.user_count}</div>
+                    </div>
+                    <div className='ml-auto'>
+                        <div className='gap-x-3 items-center bg-green-100 ml-auto flex px-2 text-green-700 rounded-lg py-1'>
+                            <FaArrowTrendUp />
+                            <div>2.15%</div>
+                        </div>
+                    </div>
+                </div>
+                <div className='bg-gray-100 text-sm px-5 py-3 mt-5 text-gray-500'>
+                    <div>С Авг 03, 2024 - Окт 08, 2024</div> 
+                </div>
+            </div>
+            <div className='bg-white w-full rounded-lg border border-gray-100'>
+                <div className='text-gray-500 text-sm mt-3 px-5'>Количество вакансии</div> 
+                <div className='flex mt-6 px-5'>
+                    <div>
+                        <div className='text-4xl'>{analytics.announcements_count}</div>
+                    </div>
+                    <div className='ml-auto'>
+                        <div className='gap-x-3 items-center bg-red-100 ml-auto flex px-2 text-red-700 rounded-lg py-1'>
+                            <FaArrowTrendDown />
+                            <div>1.25%</div>
+                        </div>
+                    </div>
+                </div>
+                <div className='bg-gray-100 text-sm px-5 py-3 mt-5 text-gray-500'>
+                    <div>С Авг 03, 2024 - Окт 08, 2024</div> 
+                </div>
+            </div>
+            <div className='bg-white w-full rounded-lg border border-gray-100'>
+                <div className='text-gray-500 text-sm mt-3 px-5'>Количество откликов</div> 
+                <div className='flex mt-6 px-5'>
+                    <div>
+                        <div className='text-4xl'>{analytics.responses_count}</div>
+                    </div>
+                    <div className='ml-auto'>
+                        <div className='gap-x-3 items-center bg-green-100 ml-auto flex px-2 text-green-700 rounded-lg py-1'>
+                            <FaArrowTrendUp />
+                            <div>5.15%</div>
+                        </div>
+                    </div>
+                </div>
+                <div className='bg-gray-100 text-sm px-5 py-3 mt-5 text-gray-500'>
+                    <div>С Авг 03, 2024 - Окт 08, 2024</div> 
+                </div>
+            </div>
+        </div>
+      </div>
+      <div className='col-span-2 py-5'>
+        <div className='bg-white w-full px-5 py-4 border border-gray-100 rounded-lg'>
+            <div>Задачи на 08.10.2024</div>
+        </div>
       </div>
     </div>
   );
