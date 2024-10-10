@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { FaArrowTrendUp, FaArrowTrendDown } from "react-icons/fa6";
 import { format } from "date-fns";
-import ru from "date-fns/locale/ru";
+import { ru } from "date-fns/locale/ru";
 
 export default function Home() {
   const [analytics, setAnalytics] = useState<{
