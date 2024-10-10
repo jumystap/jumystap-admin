@@ -85,6 +85,12 @@ export default function Home() {
             onChange={(e) => setEndDate(e.target.value)}
             className="px-5 py-2 rounded-lg border border-gray-100 bg-white"
           />
+          <div
+            className="px-5 cursor-pointer py-2 text-white bg-blue-500 rounded-lg"
+            onClick={handleUpdate}
+          >
+            Обновить
+          </div>
         </div>
 
         {!loading ? (
