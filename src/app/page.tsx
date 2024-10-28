@@ -154,7 +154,126 @@ export default function Home() {
                 <div>{formatDateRange()}</div>
               </div>
             </div>
+            
+            <div className="bg-white w-full rounded-lg border border-gray-100">
+              <div className="text-gray-500 text-sm mt-3 px-5">
+                Количество соискателей
+              </div>
+              <div className="flex mt-6 px-5">
+                <div>
+                  <div className="text-4xl">{analytics.graduate_count + analytics.none_graduate_count}</div>
+                </div>
+                <div className="ml-auto">
+                  <div className="gap-x-3 items-center bg-green-100 ml-auto flex px-2 text-green-700 rounded-lg py-1">
+                    <FaArrowTrendUp />
+                    <div>5.15%</div>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-gray-100 text-sm px-5 py-3 mt-5 text-gray-500">
+                <div>{formatDateRange()}</div>
+              </div>
+            </div>
+        
+            <div className="bg-white w-full rounded-lg border border-gray-100">
+              <div className="text-gray-500 text-sm mt-3 px-5">
+                Количество выпусников
+              </div>
+              <div className="flex mt-6 px-5">
+                <div>
+                  <div className="text-4xl">{analytics.graduate_count}</div>
+                </div>
+                <div className="ml-auto">
+                  <div className="gap-x-3 items-center bg-green-100 ml-auto flex px-2 text-green-700 rounded-lg py-1">
+                    <FaArrowTrendUp />
+                    <div>5.15%</div>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-gray-100 text-sm px-5 py-3 mt-5 text-gray-500">
+                <div>{formatDateRange()}</div>
+              </div>
+            </div>
+            
+            <div className="bg-white w-full rounded-lg border border-gray-100">
+              <div className="text-gray-500 text-sm mt-3 px-5">
+                Количество не выпусников
+              </div>
+              <div className="flex mt-6 px-5">
+                <div>
+                  <div className="text-4xl">{analytics.none_graduate_count}</div>
+                </div>
+                <div className="ml-auto">
+                  <div className="gap-x-3 items-center bg-green-100 ml-auto flex px-2 text-green-700 rounded-lg py-1">
+                    <FaArrowTrendUp />
+                    <div>5.15%</div>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-gray-100 text-sm px-5 py-3 mt-5 text-gray-500">
+                <div>{formatDateRange()}</div>
+              </div>
+            </div>
 
+            <div className="bg-white w-full rounded-lg border border-gray-100">
+              <div className="text-gray-500 text-sm mt-3 px-5">
+                Количество работодателей
+              </div>
+              <div className="flex mt-6 px-5">
+                <div>
+                  <div className="text-4xl">{analytics.companies_count}</div>
+                </div>
+                <div className="ml-auto">
+                  <div className="gap-x-3 items-center bg-green-100 ml-auto flex px-2 text-green-700 rounded-lg py-1">
+                    <FaArrowTrendUp />
+                    <div>5.15%</div>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-gray-100 text-sm px-5 py-3 mt-5 text-gray-500">
+                <div>{formatDateRange()}</div>
+              </div>
+            </div>
+        
+            <div className="bg-white w-full rounded-lg border border-gray-100">
+              <div className="text-gray-500 text-sm mt-3 px-5">
+                Количество соискателей которые оставили отклик
+              </div>
+              <div className="flex mt-6 px-5">
+                <div>
+                  <div className="text-4xl">{analytics.employees_responded_count}</div>
+                </div>
+                <div className="ml-auto">
+                  <div className="gap-x-3 items-center bg-green-100 ml-auto flex px-2 text-green-700 rounded-lg py-1">
+                    <FaArrowTrendUp />
+                    <div>5.15%</div>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-gray-100 text-sm px-5 py-3 mt-5 text-gray-500">
+                <div>{formatDateRange()}</div>
+              </div>
+            </div>
+            
+            <div className="bg-white w-full rounded-lg border border-gray-100">
+              <div className="text-gray-500 text-sm mt-3 px-5">
+                Количество вакансии которые получили отклик 
+              </div>
+              <div className="flex mt-6 px-5">
+                <div>
+                  <div className="text-4xl">{analytics.companies_responded_count}</div>
+                </div>
+                <div className="ml-auto">
+                  <div className="gap-x-3 items-center bg-green-100 ml-auto flex px-2 text-green-700 rounded-lg py-1">
+                    <FaArrowTrendUp />
+                    <div>5.15%</div>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-gray-100 text-sm px-5 py-3 mt-5 text-gray-500">
+                <div>{formatDateRange()}</div>
+              </div>
+            </div>
             <div className="col-span-2 py-2 rounded-lg border border-gray-100 bg-white">
               <div className="px-5">Топ объявлений</div>
             </div>
